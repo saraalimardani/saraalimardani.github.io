@@ -3,3 +3,5 @@
 /* Reserve one title line throughout the role animation. */
 .hero h1{white-space:nowrap}
 @media(max-width:560px){.hero h1{font-size:clamp(25px,8.2vw,45px);letter-spacing:-1px}}
+
+.portrait{display:block;width:clamp(120px,13vw,176px);height:auto;aspect-ratio:1;object-fit:cover;border-radius:50%;margin:0 auto 26px;border:3px solid #00e5e655;box-shadow:0 12px 42px #00000030}.hero .name{margin-bottom:28px}.hero .tagline{margin-top:44px}@media(max-width:560px){.portrait{width:124px;margin-bottom:22px}.hero .tagline{margin-top:30px}}
