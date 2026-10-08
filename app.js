@@ -36,8 +36,21 @@ document.fonts.ready.then(schedule);
 new ResizeObserver(schedule).observe(timeline);
 document.getElementById('year').textContent=new Date().getFullYear();
 const title=document.getElementById('typed');
+const roles=['Product Designer','UX Researcher','Interaction Designer','UI/UX Designer'];
 if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
- const text=title.textContent;title.textContent='';title.parentElement.setAttribute('aria-label',text);title.setAttribute('aria-hidden','true');let index=0;
- const type=()=>{title.textContent=text.slice(0,++index);if(index<text.length)setTimeout(type,85);};setTimeout(type,250);
+ title.parentElement.setAttribute('aria-label',roles.join(', '));
+ title.setAttribute('aria-hidden','true');
+ let roleIndex=0,letter=0,deleting=false;
+ title.textContent='';
+ function animateRole(){
+  if(document.hidden){setTimeout(animateRole,400);return;}
+  const role=roles[roleIndex];
+  letter+=deleting?-1:1;
+  title.textContent=role.slice(0,letter);
+  if(!deleting && letter===role.length){deleting=true;setTimeout(animateRole,2100);}
+  else if(deleting && letter===0){deleting=false;roleIndex=(roleIndex+1)%roles.length;setTimeout(animateRole,300);}
+  else setTimeout(animateRole,deleting?40:85);
+ }
+ setTimeout(animateRole,250);
 }
 updateScroll();
