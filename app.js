@@ -36,7 +36,7 @@ document.fonts.ready.then(schedule);
 new ResizeObserver(schedule).observe(timeline);
 document.getElementById('year').textContent=new Date().getFullYear();
 const title=document.getElementById('typed');
-const roles=['Product Designer','UX Researcher','Interaction Designer','UI/UX Designer'];
+const roles=['Product Designer','Fintech Product Designer','Interaction Designer','Design Systems Designer'];
 if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
  title.parentElement.setAttribute('aria-label',roles.join(', '));
  title.setAttribute('aria-hidden','true');

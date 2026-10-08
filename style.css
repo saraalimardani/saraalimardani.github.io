@@ -7,3 +7,5 @@
 .portrait{display:block;width:clamp(120px,13vw,176px);height:auto;aspect-ratio:1;object-fit:cover;border-radius:50%;margin:0 auto 26px;border:3px solid #00e5e655;box-shadow:0 12px 42px #00000030}.hero .name{margin-bottom:28px}.hero .tagline{margin-top:44px}@media(max-width:560px){.portrait{width:124px;margin-bottom:22px}.hero .tagline{margin-top:30px}}
 
 .scroll-cue{flex-direction:column;gap:10px;bottom:24px}.scroll-cue .scroll-mouse{display:block;position:relative;width:26px;height:42px;border:2px solid #aab4d180;border-radius:16px}.scroll-cue .scroll-wheel{position:absolute;top:8px;left:50%;width:4px;height:9px;border-radius:4px;background:var(--cyan);transform:translateX(-50%);animation:mouse-scroll 1.8s ease-in-out infinite}.scroll-cue .scroll-label{font-size:10px;color:var(--muted);letter-spacing:2.5px}@keyframes mouse-scroll{0%,100%{transform:translate(-50%,0);opacity:1}60%{transform:translate(-50%,12px);opacity:.35}}@media(prefers-reduced-motion:reduce){.scroll-cue .scroll-wheel{animation:none}}
+
+.hero h1{font-size:clamp(32px,5.4vw,78px)}@media(max-width:560px){.hero h1{font-size:clamp(22px,6.8vw,38px);letter-spacing:-.8px}}
