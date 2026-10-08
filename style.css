@@ -9,3 +9,24 @@
 .scroll-cue{flex-direction:column;gap:10px;bottom:24px}.scroll-cue .scroll-mouse{display:block;position:relative;width:26px;height:42px;border:2px solid #aab4d180;border-radius:16px}.scroll-cue .scroll-wheel{position:absolute;top:8px;left:50%;width:4px;height:9px;border-radius:4px;background:var(--cyan);transform:translateX(-50%);animation:mouse-scroll 1.8s ease-in-out infinite}.scroll-cue .scroll-label{font-size:10px;color:var(--muted);letter-spacing:2.5px}@keyframes mouse-scroll{0%,100%{transform:translate(-50%,0);opacity:1}60%{transform:translate(-50%,12px);opacity:.35}}@media(prefers-reduced-motion:reduce){.scroll-cue .scroll-wheel{animation:none}}
 
 .hero h1{font-size:clamp(32px,5.4vw,78px)}@media(max-width:560px){.hero h1{font-size:clamp(22px,6.8vw,38px);letter-spacing:-.8px}}
+
+/* Quiet palette and consistent reading hierarchy. */
+:root{--ink:#eef1f8;--muted:#bbc4d8;--cyan:#62cbd0;--purple:#8065c4;--border:rgba(181,193,237,.13)}
+body{line-height:1.75;-webkit-font-smoothing:antialiased}
+body:before{background:radial-gradient(ellipse at 0 8%,#202c7045,transparent 60%),radial-gradient(ellipse at 95% 65%,#28296925,transparent 55%)}
+h2{font-size:clamp(30px,3.6vw,46px);line-height:1.2;letter-spacing:-1px;font-weight:700}
+h3{font-size:21px;line-height:1.4;letter-spacing:-.3px}
+.section-label{color:#aab5cf;font-size:11px;letter-spacing:1.6px;font-weight:600}
+.section-heading>p{font-size:17px;line-height:1.75}
+.about-grid .lead{font-size:22px;line-height:1.6}
+.job-card{background:#121e40}.job-card h3{font-size:21px}.company{color:#d9deec;font-size:16px;font-weight:600}
+.job-card>p:not(.company),.job-card ul{font-size:16px;line-height:1.75}.job-card li+li{margin-top:10px}.job-card li::marker{color:#7f8aa7}
+.date{color:#aeb9d0}.status{color:#bacbd7;background:#afc9df0d;letter-spacing:.6px}
+.tags{gap:8px}.tags span{font-size:11px;line-height:1.5;padding:5px 11px;color:#b7c1d6;background:#ffffff03}
+.job.active-step .job-card{border-color:#8065c44d}.job.active-step .dot{border-color:#aa97d5;box-shadow:0 0 0 7px #8065c41c,0 0 0 14px #8065c40d}
+.timeline-fill{background:var(--cyan);box-shadow:none}
+.eyebrow{color:#aeb9d0;font-size:10px;letter-spacing:.8px}.work-copy>p:not(.eyebrow){font-size:16px;line-height:1.75}.work-copy details p{font-size:15px;line-height:1.75}.work-copy summary{font-size:14px}.work-copy summary span{color:#aeb9d0}
+.skill-number{color:#98a6c3}.skills-grid h3{font-size:18px}.skills-grid p{font-size:15px;line-height:1.85}.degree p{font-size:15px}.courses>div{font-size:14px}
+.contact h2{font-size:clamp(36px,4.8vw,62px);letter-spacing:-1px}.email{color:#dce3ef;border-bottom-color:#aab4d140}.contact-links{font-size:14px}.contact-links a:hover,.email:hover{color:var(--cyan)}
+.portrait{border-color:#62cbd035;box-shadow:none}.about-meta a{color:#c8d4e7}
+@media(max-width:560px){.job-card>p:not(.company),.job-card ul{font-size:15px}.work-copy>p:not(.eyebrow){font-size:15px}.about-grid .lead{font-size:20px}.skills-grid h3{font-size:17px}.skills-grid p{font-size:14px}.courses>div{font-size:13px}.section-label{font-size:10px}.contact-links{font-size:13px}}
