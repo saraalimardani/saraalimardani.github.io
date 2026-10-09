@@ -43,3 +43,5 @@ h3{font-size:21px;line-height:1.4;letter-spacing:-.3px}
 .about-grid{gap:60px}.about-grid p+p{margin-top:16px}.about-meta{margin-top:22px}
 @media(max-width:800px){.hero{padding-top:108px;padding-bottom:108px}.about-grid{gap:26px}}
 @media(max-width:560px){.hero{padding:100px 18px 110px}.portrait{width:96px;margin-bottom:16px}.hero .name{font-size:22px;margin-bottom:16px}.hero h1{font-size:clamp(22px,6.8vw,38px)}.hero .tagline{font-size:18px;margin-top:20px;max-width:330px}#about{padding-top:48px;padding-bottom:48px}.about-grid{gap:20px}.about-grid .lead{font-size:19px}}
+
+.asset-stack{gap:12px;align-items:stretch}.asset-stack>span{flex:1;min-width:0;max-width:128px;padding:12px 10px;gap:8px;background:#ffffff04;border-color:#aeb9d025}.asset-stack img{display:block;width:82px;height:82px;max-width:100%;object-fit:contain}.assets{background:radial-gradient(at 100% 0,#39416640,transparent 75%),#172340}@media(max-width:800px){.asset-stack{gap:8px}.asset-stack>span{padding:10px 6px}.asset-stack img{width:66px;height:66px}}@media(max-width:560px){.asset-stack img{width:76px;height:76px}}
