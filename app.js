@@ -25,6 +25,8 @@ function updateScroll(){
  jobs.forEach((job,i)=>job.classList.toggle('active-step',i===active));
  let current=0;
  sections.forEach((section,i)=>{if(section.getBoundingClientRect().top<=innerHeight*.35)current=i;});
+ // The final section may be too short to reach the activation line.
+ if(scrollY>0 && scrollY>=pageLength-2)current=sections.length-1;
  navLinks.forEach((a,i)=>{a.classList.toggle('active',i===current);if(i===current)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});
  document.querySelector('header').classList.toggle('scrolled',scrollY>30);
 }
