@@ -116,3 +116,8 @@ body:before{background:radial-gradient(ellipse at 0 8%,#eee7fb65,transparent 52%
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;translate:none;transition:none}}
 .case-mobile-toc{display:none}
 @media(max-width:800px){.case-mobile-toc{display:block;border:1px solid var(--border);border-radius:18px;padding:16px 20px;margin-bottom:40px;background:#fff}.case-mobile-toc summary{font-size:13px;font-weight:700;color:var(--purple);cursor:pointer;display:flex;justify-content:space-between;list-style:none}.case-mobile-toc summary::-webkit-details-marker{display:none}.case-mobile-toc a{display:block;font-size:12px;color:var(--muted);padding-top:14px}.case-mobile-toc[open] summary>span{transform:rotate(45deg)}}
+
+/* Simple section titles and a larger, unframed portrait. */
+.portrait{width:176px;border:0;box-shadow:none}
+.hero h1{color:var(--cyan)}.hero .cursor{background:var(--cyan)}
+@media(max-width:560px){.portrait{width:148px}}
