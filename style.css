@@ -45,3 +45,32 @@ h3{font-size:21px;line-height:1.4;letter-spacing:-.3px}
 @media(max-width:560px){.hero{padding:100px 18px 110px}.portrait{width:96px;margin-bottom:16px}.hero .name{font-size:22px;margin-bottom:16px}.hero h1{font-size:clamp(22px,6.8vw,38px)}.hero .tagline{font-size:18px;margin-top:20px;max-width:330px}#about{padding-top:48px;padding-bottom:48px}.about-grid{gap:20px}.about-grid .lead{font-size:19px}}
 
 .asset-stack{gap:12px;align-items:stretch}.asset-stack>span{flex:1;min-width:0;max-width:128px;padding:12px 10px;gap:8px;background:#8065C404;border-color:#65627725}.asset-stack img{display:block;width:82px;height:82px;max-width:100%;object-fit:contain}.assets{background:radial-gradient(at 100% 0,#EDE7FA40,transparent 75%),#F5F3FC}@media(max-width:800px){.asset-stack{gap:8px}.asset-stack>span{padding:10px 6px}.asset-stack img{width:66px;height:66px}}@media(max-width:560px){.asset-stack img{width:76px;height:76px}}
+
+/* Floating navigation and scroll-stacked career cards. */
+header{inset:20px auto auto 50%;transform:translateX(-50%);width:max-content;max-width:calc(100% - 24px);border:1px solid var(--border);border-radius:100px;background:#fffffff0;backdrop-filter:blur(18px);box-shadow:0 8px 30px #25223708;overflow:hidden}
+header.scrolled{background:#fffffff5;box-shadow:0 8px 30px #2522370e}
+nav{height:62px;gap:6px;padding:7px}
+nav a{padding:8px 19px}
+.page-progress{position:absolute;bottom:0;left:20px;right:20px;height:2px}
+#experience .timeline{padding-left:0;isolation:isolate}
+#experience .timeline-track,#experience .dot{display:none}
+#experience .job{position:sticky;top:var(--stack-top,112px);padding-bottom:0;margin-bottom:100px;transform-origin:center top}
+#experience .job:last-child{margin-bottom:0}
+#experience .job-card{border-radius:36px;padding:32px 42px;background:linear-gradient(130deg,#fff 70%,#f9f7fd);box-shadow:0 12px 40px #25223709;transform-origin:center top;will-change:transform,opacity;transition:none}
+#experience .job:nth-of-type(even) .job-card{background:linear-gradient(130deg,#fff 70%,#f4fafb)}
+#experience .job-card h3{margin-top:14px}
+#experience .company{color:var(--purple)}
+#experience .status{background:#0f7f8c0d;color:var(--cyan)}
+.work-grid{gap:30px;align-items:start}
+.work-card{border-radius:36px;box-shadow:0 8px 32px #25223705;transition:box-shadow .25s,border-color .25s}
+.work-card:hover{box-shadow:0 14px 38px #8065c412;border-color:#8065c44d}
+.work-visual{height:330px;padding:40px 30px;gap:36px}
+.work-visual .visual-label{top:30px;left:30px}
+.work-copy{padding:30px}
+.asset-stack img{width:112px;height:112px}
+.flow span{padding:18px 12px}
+.wallet-flow .wallet-center{padding:36px 18px}
+.system-blocks>span{padding:22px 5px;border-radius:16px}
+@media(max-width:800px){header{top:14px}nav{height:54px;gap:2px}nav a{font-size:13px;padding:8px 12px}#experience .job-card{padding:28px 30px}.work-visual{height:280px;padding:28px 16px}.flow span{padding:14px 8px}.asset-stack img{width:78px;height:78px}}
+@media(max-width:560px){header{top:12px;max-width:calc(100% - 16px)}nav{height:50px;padding:5px;gap:0}nav a{font-size:12px;padding:7px 9px}#experience .job-card{padding:24px 22px;border-radius:28px}#experience .job{margin-bottom:70px}.work-card{border-radius:28px}.work-visual{height:290px}.work-copy{padding:25px}.asset-stack img{width:94px;height:94px}}
+@media(prefers-reduced-motion:reduce){#experience .job{position:relative;top:auto;margin-bottom:24px}#experience .job-card{transform:none!important;opacity:1!important;will-change:auto}.work-card{transition:none}}
