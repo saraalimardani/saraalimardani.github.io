@@ -1,21 +1,11 @@
 'use strict';
 const timeline=document.querySelector('.timeline');
 const jobs=[...document.querySelectorAll('.job')];
-const dots=jobs.map(job=>job.querySelector('.dot'));
-const fill=document.querySelector('.timeline-fill');
 const pageFill=document.querySelector('.page-progress span');
 const navLinks=[...document.querySelectorAll('nav a')];
 const sections=navLinks.map(a=>document.querySelector(a.hash));
 let pending=false;
-function sizeCards(){
- const cards=jobs.map(job=>job.querySelector('.job-card'));
- cards.forEach(card=>card.style.minHeight='');
- if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
-  const height=Math.max(...cards.map(card=>card.offsetHeight));
-  cards.forEach(card=>card.style.minHeight=height+'px');
- }
- schedule();
-}
+function sizeCards(){schedule();}
 
 function updateScroll(){
  pending=false;
@@ -32,7 +22,7 @@ function updateScroll(){
   const distance=next ? next.getBoundingClientRect().top-top : innerHeight;
   const progress=reduced?0:Math.max(0,Math.min(1,(innerHeight*.65-distance)/(innerHeight*.65)));
   card.style.transform='scale('+(1-progress*.045)+') rotate('+(-progress*.65)+'deg)';
-  card.style.opacity=1-progress*.28;
+  card.style.opacity=1-progress*.10;
  });
  let current=0;
  sections.forEach((section,i)=>{if(section.getBoundingClientRect().top<=innerHeight*.35)current=i;});
@@ -68,3 +58,12 @@ if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
 }
 sizeCards();
 updateScroll();
+
+// Reveal selected work and supporting sections without delaying access to content.
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+ const targets=[...document.querySelectorAll('.project-card,.skills-grid article,.education-grid')];
+ const reveals=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('revealed');reveals.unobserve(entry.target);}});
+ },{threshold:.08});
+ targets.forEach((target,i)=>{target.classList.add('reveal');target.style.setProperty('--reveal-delay',(i%2)*90+'ms');reveals.observe(target);});
+}
