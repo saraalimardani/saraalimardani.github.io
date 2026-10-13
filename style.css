@@ -121,3 +121,10 @@ body:before{background:radial-gradient(ellipse at 0 8%,#eee7fb65,transparent 52%
 .portrait{width:176px;border:0;box-shadow:none}
 .hero h1{color:var(--cyan)}.hero .cursor{background:var(--cyan)}
 @media(max-width:560px){.portrait{width:148px}}
+
+/* Compact professional-development cards. */
+.courses>div{border:1px solid var(--border);border-radius:18px;background:linear-gradient(120deg,#fff,#f8f5fd);padding:16px 18px;align-items:center;gap:16px;box-shadow:0 4px 16px #39285004}
+.courses>div+div{margin-top:10px}
+.courses>div>span:first-child{font-weight:650;color:var(--ink)}
+.courses>div>span:last-child{font-size:12px;flex-shrink:0}
+@media(max-width:560px){.courses>div{padding:14px 16px;gap:12px}.courses>div>span:last-child{font-size:11px}}
