@@ -128,3 +128,10 @@ body:before{background:radial-gradient(ellipse at 0 8%,#eee7fb65,transparent 52%
 .courses>div>span:first-child{font-weight:650;color:var(--ink)}
 .courses>div>span:last-child{font-size:12px;flex-shrink:0}
 @media(max-width:560px){.courses>div{padding:14px 16px;gap:12px}.courses>div>span:last-child{font-size:11px}}
+
+/* Professional development precedes university education. */
+.education-grid{grid-template-columns:1fr;gap:64px}
+.education-grid .courses{max-width:660px;width:100%;padding-top:0}
+@media(max-width:560px){.education-grid{gap:46px}}
+
+.courses>h2{font-size:21px;line-height:1.4;letter-spacing:-.3px;margin-bottom:24px}
