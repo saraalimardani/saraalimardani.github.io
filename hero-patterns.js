@@ -1,0 +1,1 @@
+(()=>{const choice=new URLSearchParams(location.search).get('pattern');const surface=document.querySelector('.hero');if(surface&&['dots','grid','contours','crosses'].includes(choice)){surface.setAttribute('data-pattern',choice);document.body.setAttribute('data-pattern',choice);}})();
